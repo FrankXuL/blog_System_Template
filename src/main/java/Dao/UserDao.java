@@ -27,8 +27,8 @@ public class UserDao implements Dao<user> {
             connection = DBUtil.getConnection();
             String sql = "insert into user values(null,?,?)";
             statement = connection.prepareStatement(sql);
-            statement.setString(1, "userName");
-            statement.setString(2, "passWord");
+            statement.setString(1, user.getUsername());
+            statement.setString(2, user.getPassword());
             int ret = statement.executeUpdate();
             if (ret == 1) {
                 System.out.println("插入成功");
