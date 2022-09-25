@@ -41,9 +41,9 @@ public class DBUtil {
     }
 
     public static void close(Connection connection, PreparedStatement statement, ResultSet resultSet){
-        if(connection != null){
+        if (resultSet != null){
             try {
-                connection.close();
+                resultSet.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -55,9 +55,9 @@ public class DBUtil {
                 e.printStackTrace();
             }
         }
-        if (resultSet != null){
+        if(connection != null){
             try {
-                resultSet.close();
+                connection.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

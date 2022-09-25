@@ -19,7 +19,7 @@ public class Test {
         user user = new user();
         user.setUsername("oasis");
         user.setPassword("123456");
-
+        UserDao dao = new UserDao();
         userDao.insert(user);
     }
 }
