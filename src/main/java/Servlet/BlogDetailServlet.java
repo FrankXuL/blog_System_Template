@@ -22,7 +22,7 @@ import java.io.IOException;
  * @Version 1.0
  */
 @WebServlet("/blog_detail.html")
-public class BlogDetailSetvlet extends HttpServlet {
+public class BlogDetailServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 在请求中带有一个参数, blogId , 在这里再根据 blogId 来查数据库, 得到博客的详细情况
